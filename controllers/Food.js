@@ -1,5 +1,6 @@
 const Food = require('../models/Food')
 
+
 async function getAllFoods(req,res){
     try {
         const Foods = await Food.find()
@@ -33,9 +34,34 @@ async function createFood(req, res) {
     }
 
 }
+//update route
+async function UpdateFood(req, res) {
+    try {
+        const { id } = req.params;
+        const updates = req.body;
+        const food = await Food.findByIdAndUpdate(id, updates, {new: true});
+        res.json(food)
+    } catch (error) {
+        console.log('error fetching  food', error)
+        res.status(500).json({message: 'error fetching food'})
+    }
+}
 
+//delete route by id
+async function DeleteFood(req,res){
+    try {
+        const { id } = req.params
+        const food = await Food.findByIdAndDelete(id)
+        res.json(food)
+    } catch (error) {
+        console.log('error fetching  food', error)
+        res.status(500).json({message: 'error fetching food'})
+    }
+}
 module.exports = {
     getAllFoods,
     getFoodById,
     createFood,
+    UpdateFood,
+    DeleteFood,
 }

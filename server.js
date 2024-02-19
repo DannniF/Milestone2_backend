@@ -3,6 +3,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 require('dotenv').config()
 const foodRoutes = require('./routes/Food')
+const reviewRoutes = require('./routes/Review')
 
 const app = express()
 
@@ -14,6 +15,10 @@ app.use(express.json())
 
 //routes
 app.use('/foods', foodRoutes)
+
+//routes
+app.use('/Review', reviewRoutes)
+
 
 // db connection
 mongoose.connect(process.env.MONGO_URI)

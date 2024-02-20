@@ -4,6 +4,8 @@ const {
     getAllFoods,
     getFoodById,
     createFood,
+    UpdateFood,
+    DeleteFood,
 } = require('../controllers/Food')
 
 //get all Foods
@@ -16,10 +18,10 @@ router.get('/:id', getFoodById)
 router.post('/', createFood)
 
 //Delete Food
-
+router.delete('/:id', DeleteFood)
 
 //Update Food
-
+router.put('/:id', UpdateFood)
 
 //get all reviews
 

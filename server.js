@@ -3,7 +3,6 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 require('dotenv').config({ path: '.env.local' });
 const foodRoutes = require('./routes/Food')
-const authRoutes = require('./routes/Auth')
 
 const app = express()
 
@@ -18,8 +17,6 @@ app.use(express.urlencoded({extended: true}))
 //routes
 app.use('/auth', authRoutes)
 app.use('/foods', foodRoutes)
-
-
 
 // db connection
 mongoose.connect(process.env.MONGO_URI)

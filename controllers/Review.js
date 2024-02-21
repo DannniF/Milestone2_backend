@@ -1,7 +1,6 @@
 const Review = require('../models/Review')
 
 async function getAllReviews(req,res){
-    console.log('im hit')
     try {
         const Reviews = await Review.find()
         console.log(Reviews)

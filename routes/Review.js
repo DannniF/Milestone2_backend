@@ -7,7 +7,8 @@ const {
     createReview,
     getReviewById,
     UpdateReview,
-    DeleteReview
+    DeleteReview,
+    randomReview
 } = require('../controllers/Review')
 
 //get All Reviews
@@ -18,6 +19,8 @@ router.get('/:id', getRecentReview)
 router.post('/', createReview)
 //Delete Food
 router.delete('/:id', DeleteReview)
+//Random Food
+router.get('/random',randomReview )
 
 //Update Food
 router.put('/:id', UpdateReview)

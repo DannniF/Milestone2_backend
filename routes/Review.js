@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const { getFoodById } = require('../controllers/Food')
+
 const {
     getAllReviews,
     getRecentReview,

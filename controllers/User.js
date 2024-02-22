@@ -39,21 +39,6 @@ async function login(req, res) {
   }
 
 }
-// async function signUp (req, res) {
-//     try {
-//       const { name: { first, last }, email, password } = req.body;
-//       const encryptedPassword = await bcrypt.hash(password, 10);
-//       const user = await new User({
-//         name: { first, last },
-//         email,
-//         password: encryptedPassword,
-//       }).save();
-//       res.status(201).json({ message: 'User registered successfully', user });
-//     } catch (error) {
-//       console.error('Error registering user:', error);
-//       res.status(500).json({ error: 'An error occurred while registering the user' });
-//     }
-//   });
 
 module.exports = {
   signUp,

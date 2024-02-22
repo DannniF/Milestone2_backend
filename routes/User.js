@@ -5,12 +5,6 @@ const {
   login,
 } = require('../controllers/User')
 
-// //signing up
-// router.post('/signUp', signUp)
-
-
-// module.exports = router
-
 const express = require('express');
 //const router = express.Router();
 const User = require('../models/User');

@@ -21,6 +21,7 @@ router.post('/', createFood)
 
 //search foods
 router.get('/searchfoods/:searchString', findFoodsByName)
+router.get('/groceryItem/:searchString', findFoodsByName)
 
 //Delete Food
 router.delete('/:id', DeleteFood)

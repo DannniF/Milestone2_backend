@@ -2,11 +2,16 @@
 const mongoose = require('mongoose')
 
 const ReviewSchema = new mongoose.Schema({
+    name: {
+        type:String,
+       
+    },
     rating: {
         type: Number,
         required:true,
-        min:1,
+        min:0,
         max: 5
+        
     },
     comment: {
         type: String,

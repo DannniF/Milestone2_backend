@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const bcrpyt = require('bcrypt')
 require('dotenv').config({ path: '.env.local' });
 const foodRoutes = require('./routes/Food')
+const reviewRoutes = require('./routes/Review')
 const user = require('./routes/User')
 
 const app = express()
@@ -19,6 +20,7 @@ app.use(express.urlencoded({extended: true}))
 //routes
 app.use('/api/user', user)
 app.use('/foods', foodRoutes)
+app.use('/reviews', reviewRoutes)
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)

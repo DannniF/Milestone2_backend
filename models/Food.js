@@ -26,6 +26,10 @@ const FoodSchema = new mongoose.Schema({
         type: String,
         required: true,
         enum: ['frozen','deli','fruit','vegtables','canned','breads','drinks','dairy']
+    },
+    likes: {
+        type:Number,
+        required: true
     }
 
 })

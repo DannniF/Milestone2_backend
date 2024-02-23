@@ -1,17 +1,17 @@
 const router = require('express').Router()
 //check what .Router() does for our routes (controller)
 const {
-    getAllCarts,
+    getAllCart,
     getCartById,
     createCart,
-    findCartsByName,
+    findCartByName,
     UpdateCart,
     DeleteCart,
 
 } = require('../controllers/shoppingcart')
 
 //get all Foods
-router.get('/all', getAllCarts)
+router.get('/all', getAllCart)
 
 //get foods by Id
 router.get('/:id', getCartById)
@@ -20,8 +20,8 @@ router.get('/:id', getCartById)
 router.post('/', createCart)
 
 //search foods
-router.get('/searchcart/:searchString', findCartsByName)
-router.get('/groceryItem/:searchString', findCartsByName)
+router.get('/searchcart/:searchString', findCartByName)
+router.get('/groceryItem/:searchString', findCartByName)
 
 //Delete Food
 router.delete('/:id', DeleteCart)

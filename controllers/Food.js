@@ -38,12 +38,12 @@ async function createFood(req, res) {
 async function UpdateFood(req, res) {
     try {
         const { id } = req.params;
-        const updates = req.body;
-        const food = await Food.findByIdAndUpdate(id, updates, {new: true});
+        const updateData = req.body;
+        const food = await Food.findByIdAndUpdate(id, updateData, {new: true});
         res.json(food)
     } catch (error) {
-        console.log('error fetching  food', error)
-        res.status(500).json({message: 'error fetching food'})
+        console.log('error updating food', error)
+        res.status(500).json({message: 'error updating food'})
     }
 }
 
@@ -76,6 +76,8 @@ async function DeleteFood(req,res){
         res.status(500).json({message: 'error fetching food'})
     }
 }
+
+
 
 module.exports = {
     getAllFoods,

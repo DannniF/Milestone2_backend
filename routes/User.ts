@@ -3,11 +3,11 @@ const router = require('express').Router()
 const {
   signUp,
   login,
-} = require('../controllers/User')
+} = require('../controllers/User.ts')
 
 const express = require('express');
 //const router = express.Router();
-const User = require('../models/User');
+const User = require('../models/User.ts');
 
 // Check if an account exists for the given email
 router.post('/check-account', async (req, res) => {

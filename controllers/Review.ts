@@ -1,4 +1,4 @@
-const Review = require('../models/Review')
+const Review = require('../models/Review.ts')
 //get all reviews for our review page 
 async function getAllReviews(req,res){
     try {

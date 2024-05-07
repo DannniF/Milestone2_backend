@@ -8,7 +8,7 @@ const {
     UpdateFood,
     DeleteFood,
 
-} = require('../controllers/Food')
+} = require('../controllers/Food.ts')
 
 //get all Foods
 router.get('/all', getAllFoods)

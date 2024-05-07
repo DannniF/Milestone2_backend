@@ -1,15 +1,19 @@
 {
   "name": "milestone2_backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
-    "dev": "npx nodemon server.js",
-    "start": "node server.js"
+    "dev": "npx nodemon server.ts",
+    "start": "node server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.10",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.4",
@@ -17,7 +21,8 @@
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.2",
     "lowdb": "^7.0.1",
-    "mongoose": "^8.1.2"
+    "mongoose": "^8.1.2",
+    "typescript": "^5.4.5"
   },
   "description": ""
 }

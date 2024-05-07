@@ -1,13 +1,28 @@
+// import express, { Express } from 'express';
+// import cors from 'cors';
+// import mongoose from 'mongoose';
+// import bcrypt from 'bcrypt';
+// import dotenv from 'dotenv';
+// import foodRoutes from './routes/Food';
+// import user from './routes/User.ts';
+// import shoppingcart from './routes/shoppingcart';
+// import review from './routes/Review';
+
+
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const bcrpyt = require('bcrypt')
-require('dotenv').config({ path: '.env.local' });
-const foodRoutes = require('./routes/Food')
-const user = require('./routes/User')
-const shoppingcart = require('./routes/shoppingcart');
-const review = require('./routes/Review');
+require('dotenv').config({ path: '.env' });
+const foodRoutes = require('./routes/Food.ts')
+const user = require('./routes/User.ts')
+const shoppingcart = require('./routes/shoppingcart.ts');
+const review = require('./routes/Review.ts');
 const app = express()
+
+
+
+
 
 //middlewares
 //cors is for the front end
@@ -27,7 +42,6 @@ app.use('/cart',shoppingcart)
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error(err));
-
 //Start the server
 const PORT = process.env.PORT ||8080
 app.listen(PORT, console.log(`listening on port ${PORT}`))

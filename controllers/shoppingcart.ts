@@ -1,4 +1,4 @@
-const Cart = require('../models/shoppingcart')
+const Cart = require('../models/shoppingcart.ts')
 
 
 async function getAllCart(req,res){

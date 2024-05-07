@@ -9,7 +9,7 @@ const {
     UpdateReview,
     DeleteReview,
     randomReview
-} = require('../controllers/Review')
+} = require('../controllers/Review.ts')
 
 //get All Reviews
 router.get('/all', getAllReviews)

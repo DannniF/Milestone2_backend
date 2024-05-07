@@ -8,7 +8,7 @@ const {
     UpdateCart,
     DeleteCart,
 
-} = require('../controllers/shoppingcart')
+} = require('../controllers/shoppingcart.ts')
 
 //get all Foods
 router.get('/all', getAllCart)
